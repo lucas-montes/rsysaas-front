@@ -1,6 +1,7 @@
 <script lang="ts">
 	import wLogo from '$lib/images/w-svg-logo.svg';
-	import LL from "$i18n/i18n-svelte";
+	import LL from '$i18n/i18n-svelte';
+	import LocaleSwitcher from './LocaleSwitcher.svelte';
 </script>
 
 <footer class="bg-white dark:bg-neutral-900">
@@ -45,12 +46,7 @@
 							<a href="#" class="hover:underline">Privacy Policy</a>
 						</li>
 						<li>
-							<select
-								class="dark:bg-black dark:text-white bg-white text-black border dark:border-white border-black rounded-lg block w-full p-2.5"
-							>
-								<option value="en">English</option>
-								<option value="es">Spanish</option>
-							</select>
+							<LocaleSwitcher />
 						</li>
 					</ul>
 				</div>

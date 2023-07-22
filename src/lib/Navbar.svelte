@@ -1,7 +1,8 @@
 <script>
 	import wLogo from '$lib/images/w-svg-logo.svg';
 	import { page } from '$app/stores';
-	import LL from "$i18n/i18n-svelte";
+	import LL from '$i18n/i18n-svelte';
+	import Route from '$lib/Route.svelte';
 </script>
 
 <nav
@@ -11,9 +12,10 @@
 	bg-opacity-50 backdrop-filter backdrop-blur"
 >
 	<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-		<a href="https://flowbite.com/" class="flex items-center">
+		<Route route="/" class="flex items-center">
 			<img src={wLogo} class="h-8 mr-3" alt="Elerem" />
-		</a>
+		</Route>
+
 		<div class="flex md:order-2">
 			<a href={$LL.navbarButton.path()} class="btn white-button py-1 px-4"
 				>{$LL.navbarButton.title()}</a
@@ -53,12 +55,12 @@
 				{#each Object.values($LL.navbarPaths) as navbarPath}
 					<li>
 						{#if navbarPath.path() === $page.url.pathname}
-							<a href={navbarPath.path()} class="active-button" aria-current="page"
-								>{navbarPath.title()}</a
+							<Route route={navbarPath.path()} class="active-button" aria-current="page"
+								>{navbarPath.title()}</Route
 							>
 						{:else}
-							<a href={navbarPath.path()} class="not-active-button" aria-current={undefined}
-								>{navbarPath.title()}</a
+							<Route route={navbarPath.path()} class="not-active-button" aria-current={undefined}
+								>{navbarPath.title()}</Route
 							>
 						{/if}
 					</li>

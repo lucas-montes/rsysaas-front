@@ -8,7 +8,7 @@
 import { base } from '$app/paths'
 
 // e.g. https://mywebsite.com/en/blog/article-1 => /de/blog/article-1
-export const replaceLocaleInUrl = (url: URL, locale: string, full = false): string => {
+export const replaceLocaleInUrl = (url: URL, locale: string, full = true): string => {
 	const [, , ...rest] = getPathnameWithoutBase(url).split('/')
 	const new_pathname = `/${[locale, ...rest].join('/')}`
 	if (!full) {
