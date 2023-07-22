@@ -1,0 +1,92 @@
+<script lang="ts">
+	import wLogo from '$lib/images/w-svg-logo.svg';
+	import LL from "$i18n/i18n-svelte";
+</script>
+
+<footer class="bg-white dark:bg-neutral-900">
+	<div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+		<div class="md:flex md:justify-between">
+			<div class="mb-6 md:mb-0">
+				<a href="https://flowbite.com/" class="flex items-center">
+					<img src={wLogo} class="h-8 mr-3" alt="Elerem" />
+				</a>
+			</div>
+			<div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+				<div>
+					<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+						Resources
+					</h2>
+					<ul class="text-gray-500 dark:text-gray-400 font-medium">
+						<li class="mb-4">
+							<a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+						</li>
+						<li>
+							<a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+						Follow us
+					</h2>
+					<ul class="text-gray-500 dark:text-gray-400 font-medium">
+						<li class="mb-4">
+							<a href="https://github.com/themesberg/flowbite" class="hover:underline">Github</a>
+						</li>
+						<li>
+							<a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+					<ul class="text-gray-500 dark:text-gray-400 font-medium">
+						<li class="mb-4">
+							<a href="#" class="hover:underline">Privacy Policy</a>
+						</li>
+						<li>
+							<select
+								class="dark:bg-black dark:text-white bg-white text-black border dark:border-white border-black rounded-lg block w-full p-2.5"
+							>
+								<option value="en">English</option>
+								<option value="es">Spanish</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+		<div class="sm:flex sm:items-center sm:justify-between">
+			<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+				>© 2023 <a href="https://flowbite.com/" class="hover:underline">Elerem™</a>
+			</span>
+			<button
+				id="theme-toggle"
+				type="button"
+				class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+			>
+				<svg
+					id="theme-toggle-dark-icon"
+					class="hidden w-5 h-5"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+					><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg
+				>
+				<svg
+					id="theme-toggle-light-icon"
+					class="hidden w-5 h-5"
+					fill="currentColor"
+					viewBox="0 0 20 20"
+					xmlns="http://www.w3.org/2000/svg"
+					><path
+						d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+					/></svg
+				>
+			</button>
+		</div>
+	</div>
+</footer>

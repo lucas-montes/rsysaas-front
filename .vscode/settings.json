@@ -1,0 +1,9 @@
+{
+  "editor.formatOnType": false,
+  "[css]": {
+    "editor.formatOnSave": false
+},
+
+  "editor.formatOnSave": true,
+  "explorer.autoReveal": false,
+}
