@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { PUBLIC_DB_PATH } from '$env/static/public';
 	import bIcon from '$lib/images/b-icon.svg';
 	import Alert from '$lib/Alert.svelte';
 	import LL from '$i18n/i18n-svelte';
@@ -12,7 +11,7 @@
 			const payload = new URLSearchParams();
 			payload.append('email', inputEmail);
 			payload.append('message', inputMessage);
-			const response = await fetch(`http://localhost:8001/${PUBLIC_DB_PATH}`, {
+			const response = await fetch(`https://backend.elerem.com/save-new-user/`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/x-www-form-urlencoded'
