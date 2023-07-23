@@ -3,7 +3,7 @@
 <!-- Elerem Widget BEGIN -->
 <div class="elerem-widget-container">
 	<div class="elerem-widget-container__widget"></div>
-	<script type="text/javascript" src="http://localhost:8001/assets/embed-widget.js" async>
+	<script type="text/javascript" src="https://backend.elerem.com/assets/embed-widget.js" async>
 		{
 		"entity": "term",
 		"numberRecommendations": 4,

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 	import { setLocale } from '$i18n/i18n-svelte';
 	import { loadAllLocales } from '$i18n/i18n-util.sync';
 
@@ -22,6 +21,3 @@
 </main>
 
 <Footer />
-<svelte:head>
-	<title>{$page.data.title || 'typesafe-i18n'}</title>
-</svelte:head>

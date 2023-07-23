@@ -6,7 +6,9 @@
 	import UtilityStats from './home/UtilityStats.svelte';
 	import LL from '$i18n/i18n-svelte';
 
-	let title = Object.values($LL.heroTitle).map(title => title()).join();
+	let title = Object.values($LL.heroTitle)
+		.map((title) => title())
+		.join(' ');
 </script>
 
 <svelte:head>

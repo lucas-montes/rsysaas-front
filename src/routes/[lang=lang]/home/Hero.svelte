@@ -2,7 +2,8 @@
 	import { tick, onDestroy } from 'svelte';
 	import { writable } from 'svelte/store';
 	import bIcon from '$lib/images/b-icon.svg';
-	import LL from '$i18n/i18n-svelte'
+	import LL from '$i18n/i18n-svelte';
+	import Route from '$lib/Route.svelte';
 
 	const currentIndex = writable(0);
 	const gradients = [
@@ -60,12 +61,12 @@
 			{$LL.heroSubtitle()}
 		</p>
 		<div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-			<a href="/demo" class="btn white-button py-3 px-5">
-				<img src={bIcon} class="h-5 mr-3" alt="Elerem" />
+			<Route route="/demo" class="btn white-button py-3 px-5"
+				><img src={bIcon} class="h-5 mr-3" alt="Elerem" />
 				{$LL.heroFirstButton()}
-			</a>
-			<a
-				href="/demo"
+			</Route>
+			<Route
+				route="/demo"
 				class="btn
 			relative inline-flex items-center
 			justify-center p-0.5 mb-2 mr-2
@@ -87,7 +88,7 @@
 				>
 					{$LL.heroSecondButton()}
 				</span>
-			</a>
+			</Route>
 		</div>
 	</div>
 </section>

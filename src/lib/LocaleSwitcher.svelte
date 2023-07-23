@@ -52,8 +52,8 @@
 	id="dropdownDefaultButton"
 	on:click={() => (menuOpen = !menuOpen)}
 	class="
-		font-medium rounded-lg text-sm
-		px-5 py-2.5 text-center
+		font-medium rounded-lg
+		text-center
 		inline-flex items-center"
 	type="button"
 	>Languages <svg
@@ -75,10 +75,10 @@
 <!-- Dropdown menu -->
 <div
 	id="dropdown"
-	class="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-black"
+	class="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-black"
 	class:hidden={menuOpen}
 >
-	<ul class=" text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+	<ul class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
 		{#each locales as l}
 			<li>
 				<a
