@@ -4,8 +4,8 @@
 
 	import type { LayoutData } from './$types';
 
-	import Navbar from '$lib/Navbar.svelte';
-	import Footer from '$lib/Footer.svelte';
+	import Navbar from '$lib/components/Navbar.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import '../styles/style.css';
 
 	export let data: LayoutData;

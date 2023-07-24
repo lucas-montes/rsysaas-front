@@ -1,15 +1,20 @@
 <script>
-	let example = `
+	import Highlight, { LineNumbers } from 'svelte-highlight';
+	import vbscriptHtml from 'svelte-highlight/languages/vbscript-html';
+	import atomOneDark from 'svelte-highlight/styles/atom-one-dark';
+	import { ASSETS_URL } from '$src/constants';
+
+	const code = `
 <!-- Elerem Widget BEGIN -->
 <div class="elerem-widget-container">
 	<div class="elerem-widget-container__widget"></div>
-	<script type="text/javascript" src="https://backend.elerem.com/assets/embed-widget.js" async>
+	<script type="text/javascript" src="${ASSETS_URL}" async>
 		{
 		"entity": "term",
 		"numberRecommendations": 4,
 		"userId": 1,
 		"prodId": 5,
-		"publicKey": "public_invfin_api_key",
+		"publicKey": "public_api_key",
 		"isFor": "product"
 		}
 	<script>
@@ -18,21 +23,10 @@
 	`;
 </script>
 
-<div
-	class="p-4 bg-bg-grey-800 rounded-lg dark:bg-grey-800"
-	role="tabpanel"
-	aria-labelledby="services-tab"
->
-	<pre>
-	<code>
-{example}
-	</code>
-	</pre>
-</div>
+<svelte:head>
+	{@html atomOneDark}
+</svelte:head>
 
-<style>
-	pre {
-		overflow-x: auto;
-		word-wrap: break-word;
-	}
-</style>
+<Highlight language={vbscriptHtml} {code} let:highlighted>
+	<LineNumbers {highlighted} hideBorder />
+</Highlight>

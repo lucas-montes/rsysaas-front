@@ -6,7 +6,7 @@
 	import type { Locales } from '$i18n/i18n-types';
 	import { locales } from '$i18n/i18n-util';
 	import { loadLocaleAsync } from '$i18n/i18n-util.async';
-	import { replaceLocaleInUrl } from '../utils.js';
+	import { replaceLocaleInUrl } from '$src/utils.js';
 
 	const switchLocale = async (newLocale: Locales, updateHistoryState = true) => {
 		if (!newLocale || $locale === newLocale) return;

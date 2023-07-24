@@ -37,13 +37,17 @@ type RootTranslation = {
 	 */
 	contactTitle: string
 	/**
-	 * U​n​l​o​c​k​ ​t​h​e​ ​f​u​l​l​ ​p​o​t​e​n​t​i​a​l​ ​o​f​ ​y​o​u​r​ ​i​n​t​e​r​e​s​t​s​ ​w​i​t​h​ ​o​u​r​ ​c​u​t​t​i​n​g​-​e​d​g​e​ ​r​e​c​o​m​m​e​n​d​a​t​i​o​n​ ​s​y​s​t​e​m​!​ ​S​i​g​n​ ​u​p​ ​n​o​w​ ​f​o​r​ ​a​ ​f​r​e​e​ ​d​e​m​o​ ​a​n​d​ ​d​i​s​c​o​v​e​r​ ​h​o​w​ ​o​u​r​ ​a​d​v​a​n​c​e​d​ ​a​l​g​o​r​i​t​h​m​s​ ​c​u​r​a​t​e​ ​p​e​r​s​o​n​a​l​i​z​e​d​ ​s​u​g​g​e​s​t​i​o​n​s​ ​t​h​a​t​ ​p​e​r​f​e​c​t​l​y​ ​m​a​t​c​h​ ​y​o​u​r​ ​p​r​e​f​e​r​e​n​c​e​s​.​ ​E​m​b​r​a​c​e​ ​a​ ​t​a​i​l​o​r​e​d​ ​e​x​p​e​r​i​e​n​c​e​ ​t​h​a​t​ ​s​a​v​e​s​ ​y​o​u​ ​t​i​m​e​,​ ​h​e​l​p​s​ ​y​o​u​ ​e​x​p​l​o​r​e​ ​n​e​w​ ​h​o​r​i​z​o​n​s​,​ ​a​n​d​ ​k​e​e​p​s​ ​y​o​u​ ​o​n​e​ ​s​t​e​p​ ​a​h​e​a​d​ ​i​n​ ​y​o​u​r​ ​j​o​u​r​n​e​y​.​ ​D​o​n​'​t​ ​m​i​s​s​ ​o​u​t​ ​o​n​ ​t​h​i​s​ ​o​p​p​o​r​t​u​n​i​t​y​ ​t​o​ ​r​e​v​o​l​u​t​i​o​n​i​z​e​ ​y​o​u​r​ ​o​n​l​i​n​e​ ​e​x​p​e​r​i​e​n​c​e​ ​–​ ​j​o​i​n​ ​o​u​r​ ​d​e​m​o​ ​t​o​d​a​y​!
+	 * U​n​l​e​a​s​h​ ​p​e​r​s​o​n​a​l​i​z​e​d​ ​r​e​c​o​m​m​e​n​d​a​t​i​o​n​s​!​ ​S​i​g​n​ ​u​p​ ​f​o​r​ ​a​ ​f​r​e​e​ ​d​e​m​o​ ​n​o​w​ ​a​n​d​ ​r​e​v​o​l​u​t​i​o​n​i​z​e​ ​y​o​u​r​ ​o​n​l​i​n​e​ ​e​x​p​e​r​i​e​n​c​e​.​ ​E​x​p​l​o​r​e​ ​n​e​w​ ​h​o​r​i​z​o​n​s​ ​w​i​t​h​ ​u​s​ ​t​o​d​a​y​!
 	 */
 	contactContet: string
 	/**
 	 * S​e​n​d
 	 */
 	contactButton: string
+	/**
+	 * N​a​m​e
+	 */
+	contactInputName: string
 	/**
 	 * I​f​ ​y​o​u​ ​h​a​v​e​ ​a​n​y​ ​q​u​e​s​t​i​o​n​ ​o​r​ ​m​e​s​s​a​g​e​ ​l​e​t​ ​u​s​ ​k​n​o​w
 	 */
@@ -202,13 +206,17 @@ export type TranslationFunctions = {
 	 */
 	contactTitle: () => LocalizedString
 	/**
-	 * Unlock the full potential of your interests with our cutting-edge recommendation system! Sign up now for a free demo and discover how our advanced algorithms curate personalized suggestions that perfectly match your preferences. Embrace a tailored experience that saves you time, helps you explore new horizons, and keeps you one step ahead in your journey. Don't miss out on this opportunity to revolutionize your online experience – join our demo today!
+	 * Unleash personalized recommendations! Sign up for a free demo now and revolutionize your online experience. Explore new horizons with us today!
 	 */
 	contactContet: () => LocalizedString
 	/**
 	 * Send
 	 */
 	contactButton: () => LocalizedString
+	/**
+	 * Name
+	 */
+	contactInputName: () => LocalizedString
 	/**
 	 * If you have any question or message let us know
 	 */

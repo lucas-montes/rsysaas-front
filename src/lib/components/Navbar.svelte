@@ -2,7 +2,7 @@
 	import wLogo from '$lib/images/w-svg-logo.svg';
 	import { page } from '$app/stores';
 	import LL from '$i18n/i18n-svelte';
-	import Route from '$lib/Route.svelte';
+	import Route from '$lib/components/Route.svelte';
 </script>
 
 <nav

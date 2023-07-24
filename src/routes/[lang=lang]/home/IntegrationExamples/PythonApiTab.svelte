@@ -1,28 +1,27 @@
-<div
-	class="p-4 bg-grey-800 rounded-lg dark:bg-grey-800"
-	role="tabpanel"
-	aria-labelledby="services-tab"
->
-	<pre>
-	<code>
-	
+<script>
+	import Highlight, { LineNumbers } from 'svelte-highlight';
+	import python from 'svelte-highlight/languages/python';
+	import atomOneDark from 'svelte-highlight/styles/atom-one-dark';
+	import { API_URL } from '$src/constants';
+
+	const code = `
 import requests
 
-url = "https://elerem.com/api/v1/recommendations/"
-{@html `headers = {`}
-	"Authorization": "Bearer your_token_here"
-	{@html `}`}
+
+url = "${API_URL}"
+token = "your_token_here"
+headers = {
+	"Authorization": f"Bearer {token}"
+}
 
 response = requests.get(url, headers=headers)
-	
-	
-	</code>
-	</pre>
-</div>
+	`;
+</script>
 
-<style>
-	pre {
-		overflow-x: auto;
-		word-wrap: break-word;
-	}
-</style>
+<svelte:head>
+	{@html atomOneDark}
+</svelte:head>
+
+<Highlight language={python} {code} let:highlighted>
+	<LineNumbers {highlighted} hideBorder />
+</Highlight>

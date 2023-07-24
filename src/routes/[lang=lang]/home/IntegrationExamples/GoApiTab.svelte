@@ -1,10 +1,10 @@
-<div
-	class="p-4 bg-grey-800 rounded-lg dark:bg-grey-800"
-	role="tabpanel"
-	aria-labelledby="services-tab"
->
-	<pre>
-		<code>
+<script>
+	import Highlight, { LineNumbers } from 'svelte-highlight';
+	import go from 'svelte-highlight/languages/go';
+	import atomOneDark from 'svelte-highlight/styles/atom-one-dark';
+	import { API_URL } from '$src/constants';
+
+	const code = `
 package main
 
 import (
@@ -12,22 +12,22 @@ import (
 	"net/http"
 )
 
-{@html `func main() {`}
-	url := "https://elerem.com/api/v1/recommendations/"
+func main() {
+	url := "${API_URL}"
 	bearerToken := "your_token_here"
 
 	req, _ := http.NewRequest("GET", url, nil)
 	req.Header.Add("Authorization", "Bearer "+bearerToken)
 
 	resp, _ := http.DefaultClient.Do(req)
-	{@html `defer resp.Body.Close()}`}
-		</code>
-	</pre>
-</div>
+	defer resp.Body.Close()}
+	`;
+</script>
 
-<style>
-	pre {
-		overflow-x: auto;
-		word-wrap: break-word;
-	}
-</style>
+<svelte:head>
+	{@html atomOneDark}
+</svelte:head>
+
+<Highlight language={go} {code} let:highlighted>
+	<LineNumbers {highlighted} hideBorder />
+</Highlight>

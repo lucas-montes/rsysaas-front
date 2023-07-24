@@ -1,17 +1,20 @@
 <script lang="ts">
 	import bIcon from '$lib/images/b-icon.svg';
-	import Alert from '$lib/Alert.svelte';
+	import Alert from '$lib/components/Alert.svelte';
 	import LL from '$i18n/i18n-svelte';
+	import { NEW_USER_URL } from '$src/constants';
 
 	let showAlert = false;
+	let inputName = '';
 	let inputEmail = '';
 	let inputMessage = '';
 	const onSubmit = async () => {
 		try {
 			const payload = new URLSearchParams();
 			payload.append('email', inputEmail);
+			payload.append('name', inputName);
 			payload.append('message', inputMessage);
-			const response = await fetch(`https://backend.elerem.com/save-new-user/`, {
+			const response = await fetch(NEW_USER_URL, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/x-www-form-urlencoded'
@@ -22,6 +25,7 @@
 			if (response.ok) {
 				showAlert = true;
 				// Clear the form inputs after successful submission
+				inputName = '';
 				inputEmail = '';
 				inputMessage = '';
 			} else {
@@ -50,6 +54,27 @@
 			{$LL.contactContet()}
 		</p>
 		<form on:submit|preventDefault={onSubmit} class="space-y-8">
+			<div>
+				<label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+					>{$LL.contactInputName()}</label
+				>
+				<input
+					type="text"
+					id="name"
+					bind:value={inputName}
+					class="
+						shadow-sm border
+						border-black text-black bg-white
+						text-sm rounded-lg focus:ring-primary-500
+						focus:border-primary-500 block w-full
+						p-2.5 dark:bg-black dark:border-white
+						dark:placeholder-gray-400 dark:text-white
+						dark:focus:ring-primary-500
+						dark:focus:border-primary-500
+						dark:shadow-sm-light"
+					required
+				/>
+			</div>
 			<div>
 				<label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
 					>Email</label

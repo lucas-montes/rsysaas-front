@@ -1,8 +1,8 @@
 <script lang="ts">
 	import wLogo from '$lib/images/w-svg-logo.svg';
 	import LL from '$i18n/i18n-svelte';
-	import LocaleSwitcher from '$lib/LocaleSwitcher.svelte';
-	import Route from '$lib/Route.svelte';
+	import LocaleSwitcher from '$lib/components/LocaleSwitcher.svelte';
+	import Route from '$lib/components/Route.svelte';
 </script>
 
 <footer class="bg-white dark:bg-neutral-900">

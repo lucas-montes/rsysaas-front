@@ -3,7 +3,7 @@
 	import { writable } from 'svelte/store';
 	import bIcon from '$lib/images/b-icon.svg';
 	import LL from '$i18n/i18n-svelte';
-	import Route from '$lib/Route.svelte';
+	import Route from '$lib/components/Route.svelte';
 
 	const currentIndex = writable(0);
 	const gradients = [
