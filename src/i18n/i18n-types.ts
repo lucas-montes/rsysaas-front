@@ -49,6 +49,10 @@ type RootTranslation = {
 	 */
 	contactInputName: string
 	/**
+	 * T​h​a​n​k​ ​y​o​u​ ​f​o​r​ ​y​o​u​r​ ​i​n​t​e​r​e​s​t​,​ ​w​e​'​l​l​ ​c​o​n​t​a​c​t​ ​y​o​u​ ​s​h​o​r​t​l​y
+	 */
+	contactMessage: string
+	/**
 	 * I​f​ ​y​o​u​ ​h​a​v​e​ ​a​n​y​ ​q​u​e​s​t​i​o​n​ ​o​r​ ​m​e​s​s​a​g​e​ ​l​e​t​ ​u​s​ ​k​n​o​w
 	 */
 	contactFormMessagePlaceholder: string
@@ -217,6 +221,10 @@ export type TranslationFunctions = {
 	 * Name
 	 */
 	contactInputName: () => LocalizedString
+	/**
+	 * Thank you for your interest, we'll contact you shortly
+	 */
+	contactMessage: () => LocalizedString
 	/**
 	 * If you have any question or message let us know
 	 */

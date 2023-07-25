@@ -11,6 +11,7 @@ const en = {
 	contactContet: "Unleash personalized recommendations! Sign up for a free demo now and revolutionize your online experience. Explore new horizons with us today!",
 	contactButton: "Send",
 	contactInputName: "Name",
+	contactMessage: "Thank you for your interest, we'll contact you shortly",
 	contactFormMessagePlaceholder: "If you have any question or message let us know",
 	section1Title: "Elevate Your Business with Tailored Recommendations",
 	section1Subtitle: "Sync Your Data to Start Personalizing",

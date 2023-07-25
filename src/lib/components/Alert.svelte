@@ -1,5 +1,6 @@
 <script lang="ts">
-	export let show: Boolean;
+	export let show: boolean;
+	export let message: string;
 
 	function closeAlert() {
 		show = false;
@@ -9,7 +10,14 @@
 {#if show}
 	<div
 		id="alert-3"
-		class="flex items-center p-4 mb-4 text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"
+		class="
+            border border-dark 
+            flex items-center 
+            p-4 mb-4 text-green-800 
+            rounded-lg bg-green-50 
+            dark:bg-black dark:border-green-400
+            dark:text-green-400
+            "
 		role="alert"
 	>
 		<svg
@@ -25,9 +33,7 @@
 		</svg>
 		<span class="sr-only">Info</span>
 		<div class="ml-3 text-sm font-medium">
-			A simple info alert with an <a href="#" class="font-semibold underline hover:no-underline"
-				>example link</a
-			>. Give it a click if you like.
+			{message}
 		</div>
 		<button
 			on:click={closeAlert}

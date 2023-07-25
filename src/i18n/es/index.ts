@@ -11,6 +11,7 @@ const es = {
 	contactContet: "Regístrate para una demostración gratuita y revoluciona tu experiencia online. ¡Explora nuevos horizontes con nosotros hoy mismo! ¡Anímate a probarlo!",
 	contactButton: "Enviar",
 	contactInputName: "Nombre",
+	contactMessage: "Gracias por su confianza, nos pondremos en contacto enseguida",
 	contactFormMessagePlaceholder: "Si tienes alguna duda o quieres enviarnos un mensaje este es el lugar",
 	section1Title: "Eleva tu Negocio con Recomendaciones a Medida",
 	section1Subtitle: "Sincroniza tus Datos para Personalizar",

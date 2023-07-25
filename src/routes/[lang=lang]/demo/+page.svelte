@@ -14,6 +14,10 @@
 			payload.append('email', inputEmail);
 			payload.append('name', inputName);
 			payload.append('message', inputMessage);
+
+			payload.append('agent', navigator.userAgent);
+			payload.append('language', navigator.language);
+			payload.append('url', document.URL);
 			const response = await fetch(NEW_USER_URL, {
 				method: 'POST',
 				headers: {
@@ -43,7 +47,7 @@
 </svelte:head>
 
 <section class="mt-20">
-	<Alert show={showAlert} />
+	<Alert show={showAlert} message={$LL.contactMessage()} />
 	<div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
 		<h2
 			class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white"
