@@ -14,7 +14,15 @@ headers = {
 	"Authorization": f"Bearer {token}"
 }
 
-response = requests.get(url, headers=headers)
+params = {
+    "entity": "book",
+    "target": "product",
+    "userId": 1,
+    "prodId": 1,
+    "numberRecommendations": 5,
+}
+
+response = requests.get(url, params=params, headers=headers)
 	`;
 </script>
 

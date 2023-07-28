@@ -16,7 +16,17 @@ func main() {
 	url := "${API_URL}"
 	bearerToken := "your_token_here"
 
-	req, _ := http.NewRequest("GET", url, nil)
+	params := url.Values{}
+	params.Add("entity", "book")
+    params.Add("target", "product")
+    params.Add("userId", 1)
+    params.Add("prodId", 1)
+    params.Add("numberRecommendations", 5)
+
+	u.RawQuery = params.Encode()
+	urlWithParams := u.String()
+
+	req, _ := http.NewRequest("GET", urlWithParams, nil)
 	req.Header.Add("Authorization", "Bearer "+bearerToken)
 
 	resp, _ := http.DefaultClient.Do(req)

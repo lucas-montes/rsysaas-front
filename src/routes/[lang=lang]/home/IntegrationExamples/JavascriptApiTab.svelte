@@ -8,23 +8,23 @@
 const https = require('https');
 const url = '${API_URL}';
 const bearerToken = 'your_token_here';
-
-
+const axios = require('axios');
 const options = {
 headers: {
 'Authorization': 'Bearer ' + bearerToken
-}
+},
+params: {
+    entity: "book",
+    target: "product",
+    userId: 1,
+    prodId: 1,
+    numberRecommendations: 5,
+  }
 };
 
-const axios = require('axios');
+
 axios.get(url, options)
 
-axios.get('https://jsonplaceholder.typicode.com/users')
-.then(res => {
-res.data
-.catch(err => {
-console.log('Error: ', err.message);
-});
 	`;
 </script>
 
