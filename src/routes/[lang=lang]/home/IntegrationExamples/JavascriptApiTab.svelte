@@ -14,9 +14,8 @@ headers: {
 'Authorization': 'Bearer ' + bearerToken
 },
 params: {
-    entity: "book",
+    entity: "books",
     target: "product",
-    userId: 1,
     prodId: 1,
     numberRecommendations: 5,
   }

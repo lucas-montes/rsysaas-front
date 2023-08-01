@@ -17,9 +17,8 @@ func main() {
 	bearerToken := "your_token_here"
 
 	params := url.Values{}
-	params.Add("entity", "book")
+	params.Add("entity", "books")
     params.Add("target", "product")
-    params.Add("userId", 1)
     params.Add("prodId", 1)
     params.Add("numberRecommendations", 5)
 

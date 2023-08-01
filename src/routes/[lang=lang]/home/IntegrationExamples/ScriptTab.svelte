@@ -10,9 +10,8 @@
 	<div class="elerem-widget-container__widget"></div>
 	<script type="text/javascript" src="${ASSETS_URL}" async>
 		{
-		"entity": "book",
+		"entity": "books",
 		"numberRecommendations": 5,
-		"userId": 1,
 		"prodId": 2,
 		"publicKey": "public_api_key",
 		"target": "product"
